@@ -48,7 +48,7 @@
                         <h3 class="panel-title">Login</h3>
                     </div>
                     <div class="panel-body">
-                        <form role="creacion.php" method="post">
+                        <form action="creacion.php" method="post">
                             <fieldset>
                                 <div class="form-group">
                                     <input class="form-control" placeholder="Nombre completo" name="nombre" type="text" autofocus>
@@ -60,7 +60,10 @@
                                     <input class="form-control" placeholder="Password" name="contra" type="password" autofocus>
                                 </div>
 								<div class="form-group">
-                                    <input class="form-control" placeholder="Año nacimiento" name="nacimiento" type="text" autofocus>
+                                    <input class="form-control" placeholder="Aï¿½o nacimiento" name="nacimiento" type="text" autofocus>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Pais" name="pais" type="text" autofocus>
                                 </div>
                                 <!-- Change this to a button or input when using this as a form -->
 								<button class="btn btn-lg btn-danger btn-block" name="enviodatos" value="enviodatos">Crear usuario</button>
