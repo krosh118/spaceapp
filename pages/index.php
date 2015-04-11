@@ -51,13 +51,13 @@
                         <h3 class="panel-title">Iniciar sesión</h3>
                     </div>
                     <div class="panel-body">
-                        <form role="form" action="#">
+                        <form role="form" action="inicio.php">
                             <fieldset>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="E-mail" name="email" type="email" required autofocus>
+                                    <input class="form-control" placeholder="E-mail" name="email" type="email" autofocus>
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="Password" name="password" type="password" value="" required>
+                                    <input class="form-control" placeholder="Password" name="password" type="password" value="">
                                 </div>
                                 <!-- Change this to a button or input when using this as a form -->
                                 <input class="btn btn-success" value="Entrar" type="submit" style="width: 100%" id="iniciar">
