@@ -40,7 +40,8 @@
     </style>
 </head>
 
-<body class="bodycolor1">
+<body background="nasa-images.jpg">
+
 <span class="Estilo1"></span>
 
     <div class="container">
@@ -48,7 +49,7 @@
             <div class="col-md-4 col-md-offset-4">
                 <div class="login-panel panel panel-default">
                     <div class="panel-heading">
-                        <h3 class="panel-title">Iniciar sesión</h3>
+                        <h3 class="panel-title">Bienvenido RedSpace</h3>
                     </div>
                     <div class="panel-body">
                         <form role="form" action="inicio.php">
