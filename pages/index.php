@@ -10,6 +10,9 @@
     <meta name="author" content="">
 
     <title>RedSpace index</title>
+    
+    <!-- Custom JS -->
+    <script type="text/javascript" src="/js/index.js"></script>
 
     <!-- Bootstrap Core CSS -->
     <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -45,19 +48,20 @@
             <div class="col-md-4 col-md-offset-4">
                 <div class="login-panel panel panel-default">
                     <div class="panel-heading">
-                        <h3 class="panel-title">Login</h3>
+                        <h3 class="panel-title">Iniciar sesión</h3>
                     </div>
                     <div class="panel-body">
-                        <form role="form">
+                        <form role="form" action="#">
                             <fieldset>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="E-mail" name="email" type="email" autofocus>
+                                    <input class="form-control" placeholder="E-mail" name="email" type="email" required autofocus>
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="Password" name="password" type="password" value="">
+                                    <input class="form-control" placeholder="Password" name="password" type="password" value="" required>
                                 </div>
                                 <!-- Change this to a button or input when using this as a form -->
-                                <a href="index.html" class="btn btn-lg btn-success btn-block">Entrar</a>
+                                <input class="btn btn-success" value="Entrar" type="submit" style="width: 100%" id="iniciar">
+                                <div id="resultado"></div>
                             </fieldset>
                         </form>
 						<br>
