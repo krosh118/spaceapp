@@ -1,3 +1,10 @@
+<?php
+session_start(); 
+
+
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -53,8 +60,8 @@
                                 <h5>
 									Eres Experto....
 								</h5>
-                                <a href="kkkk.html" class="btn btn-lg btn-success btn-block">Si</a>
-								<a href="aaaa.php" class="btn btn-lg btn-warning btn-block">No</a>
+                                <a href="cargacurriculum.php" class="btn btn-lg btn-success btn-block">Si</a>
+								<a href="inicio.php" class="btn btn-lg btn-warning btn-block">No</a>
                             </fieldset>
                         </form>
 						<br>						
