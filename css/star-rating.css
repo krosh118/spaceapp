@@ -1,0 +1,257 @@
+/*!
+ * @copyright &copy; Kartik Visweswaran, Krajee.com, 2013 - 2015
+ * @version 3.5.1
+ *
+ * A simple yet powerful JQuery star rating plugin that allows rendering
+ * fractional star ratings and supports Right to Left (RTL) input.
+ *
+ * For more JQuery/Bootstrap plugins and demos visit http://plugins.krajee.com
+ * For more Yii related demos visit http://demos.krajee.com
+ */
+.rating-loading {
+    width: 25px;
+    height: 25px;
+    font-size: 0px;
+    color: #fff;
+    background: transparent url('../img/loading.gif') top left no-repeat;
+    border: none;
+}
+/*
+ * Stars
+ */
+.rating-fa {
+    font-family: 'FontAwesome';
+    padding-left: 1px;
+}
+
+.rating-fa .rating-stars:before {
+    padding-left: 1px;
+}
+
+.rating-gly {
+    font-family: 'Glyphicons Halflings';
+}
+
+.rating-gly-star {
+    font-family: 'Glyphicons Halflings';
+    padding-left: 2px;
+}
+
+.rating-gly-star .rating-stars:before {
+    padding-left: 2px;
+}
+
+.rating-lg .rating-gly-star, .rating-lg .rating-gly-star .rating-stars:before {
+    padding-left: 4px;
+}
+
+.rating-xl .rating-gly-star, .rating-xl .rating-gly-star .rating-stars:before {
+    padding-left: 2px;
+}
+
+.rating-active {
+    cursor: default;
+}
+
+.rating-disabled {
+    cursor: not-allowed;
+}
+
+.rating-uni {
+    font-size: 1.2em;
+    margin-top: -5px;
+}
+
+.rating-container {
+    position: relative;
+    vertical-align: middle;
+    display: inline-block;
+    color: #e3e3e3;
+    overflow: hidden;
+}
+
+.rating-container:before {
+    content: attr(data-content);
+}
+
+.rating-container .rating-stars {
+    position: absolute;
+    left: 0;
+    top: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #fde16d;
+    transition: all 0.25s ease-out;
+    -o-transition: all 0.25s ease-out;
+    -moz-transition: all 0.25s ease-out;
+    -webkit-transition: all 0.25s ease-out;
+}
+
+.rating-container .rating-stars:before {
+    content: attr(data-content);
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.7);
+}
+
+.rating-container-rtl {
+    position: relative;
+    vertical-align: middle;
+    display: inline-block;
+    overflow: hidden;
+    color: #fde16d;
+}
+
+.rating-container-rtl:before {
+    content: attr(data-content);
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.7);
+}
+
+.rating-container-rtl .rating-stars {
+    position: absolute;
+    left: 0;
+    top: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #e3e3e3;
+    transition: all 0.25s ease-out;
+    -o-transition: all 0.25s ease-out;
+    -moz-transition: all 0.25s ease-out;
+    -webkit-transition: all 0.25s ease-out;
+}
+
+.rating-container-rtl .rating-stars:before {
+    content: attr(data-content);
+}
+
+/**
+ * Rating sizes
+ */
+.rating-xl {
+    font-size: 4.89em;
+}
+
+.rating-lg {
+    font-size: 3.91em;
+}
+
+.rating-md {
+    font-size: 3.13em;
+}
+
+.rating-sm {
+    font-size: 2.5em;
+}
+
+.rating-xs {
+    font-size: 2em;
+}
+
+/**
+ * Clear rating button
+ */
+.star-rating .clear-rating, .star-rating-rtl .clear-rating {
+    color: #aaa;
+    cursor: not-allowed;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 60%;
+}
+
+.clear-rating-active {
+    cursor: pointer !important;
+}
+
+.clear-rating-active:hover {
+    color: #843534;
+}
+
+.star-rating .clear-rating {
+    padding-right: 5px;
+}
+
+/**
+ * Caption
+ */
+.star-rating .caption, .star-rating-rtl .caption {
+    color: #999;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 55%;
+}
+
+.star-rating .caption {
+    padding-left: 5px;
+}
+
+.star-rating-rtl .caption {
+    padding-right: 5px;
+}
+
+
+@import url(//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css);
+
+.detailBox {
+    width:320px;
+    border:1px solid #bbb;
+    margin:50px;
+}
+.titleBox {
+    background-color:#fdfdfd;
+    padding:10px;
+}
+.titleBox label{
+  color:#444;
+  margin:0;
+  display:inline-block;
+}
+
+.commentBox {
+    padding:10px;
+    border-top:1px dotted #bbb;
+}
+.commentBox .form-group:first-child, .actionBox .form-group:first-child {
+    width:80%;
+}
+.commentBox .form-group:nth-child(2), .actionBox .form-group:nth-child(2) {
+    width:18%;
+}
+.actionBox .form-group * {
+    width:100%;
+}
+.taskDescription {
+    margin-top:10px 0;
+}
+.commentList {
+    padding:0;
+    list-style:none;
+    max-height:200px;
+    overflow:auto;
+}
+.commentList li {
+    margin:0;
+    margin-top:10px;
+}
+.commentList li > div {
+    display:table-cell;
+}
+.commenterImage {
+    width:30px;
+    margin-right:5px;
+    height:100%;
+    float:left;
+}
+.commenterImage img {
+    width:100%;
+    border-radius:50%;
+}
+.commentText p {
+    margin:0;
+}
+.sub-text {
+    color:#aaa;
+    font-family:verdana;
+    font-size:11px;
+}
+.actionBox {
+    border-top:1px dotted #bbb;
+    padding:10px;
+}
