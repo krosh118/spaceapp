@@ -164,11 +164,11 @@
     </div>
 
     <div class="item">
-      <img src="../img/img_chania2.jpg" alt="Chania">
+      <img src="../img/uno.jpg" alt="Chania">
     </div>
 
     <div class="item">
-      <img src="../img/img_flower.jpg" alt="Flower">
+      <img src="../img/dos.jpg" alt="Flower">
     </div>
 
     <div class="item">
