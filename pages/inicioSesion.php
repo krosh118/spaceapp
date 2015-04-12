@@ -45,7 +45,9 @@ function verificar_login($correo, $password, &$result) {
     $rec = mysql_query($sql) or die(mysql_error());
 
     $count = 0;
-
+    
+    $nombre = "";
+    
     while ($row = mysql_fetch_object($rec)) {
 
         $count++;
@@ -54,6 +56,10 @@ function verificar_login($correo, $password, &$result) {
     }
 
     if ($count == 1) {
+        
+        session_start();
+        
+        $_SESSION['nombre'] = $result->nombre;
 
         return 1;
     } else {
