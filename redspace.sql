@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 11-04-2015 a las 23:09:52
+-- Tiempo de generación: 12-04-2015 a las 21:00:35
 -- Versión del servidor: 5.6.21
 -- Versión de PHP: 5.6.3
 
@@ -57,22 +57,25 @@ CREATE TABLE IF NOT EXISTS `imagen` (
 CREATE TABLE IF NOT EXISTS `usuario` (
 `ID_USUARIO` int(11) NOT NULL,
   `nombre` varchar(100) COLLATE utf8mb4_spanish2_ci NOT NULL,
-  `constraseña` varchar(100) COLLATE utf8mb4_spanish2_ci NOT NULL,
+  `pass` varchar(100) COLLATE utf8mb4_spanish2_ci NOT NULL,
   `pais` varchar(150) COLLATE utf8mb4_spanish2_ci NOT NULL,
   `fecha_nacimiento` int(11) NOT NULL,
   `experto` int(1) NOT NULL,
   `nivel` int(11) NOT NULL,
   `exp_actual` int(11) NOT NULL,
   `correo` varchar(50) COLLATE utf8mb4_spanish2_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci;
 
 --
 -- Volcado de datos para la tabla `usuario`
 --
 
-INSERT INTO `usuario` (`ID_USUARIO`, `nombre`, `constraseña`, `pais`, `fecha_nacimiento`, `experto`, `nivel`, `exp_actual`, `correo`) VALUES
+INSERT INTO `usuario` (`ID_USUARIO`, `nombre`, `pass`, `pais`, `fecha_nacimiento`, `experto`, `nivel`, `exp_actual`, `correo`) VALUES
 (2, 'Bryam', '1', 'guatemala', 1991, 1, 0, 0, 'bryamdeleon@gmail.com'),
-(3, 'Bladimir', '2', 'guatemala', 1990, 1, 0, 0, 'ffsadf@gmail.com');
+(3, 'Bladimir', '2', 'guatemala', 1990, 1, 0, 0, 'ffsadf@gmail.com'),
+(4, 'fdsa', 'fasdf', 'fsda', 1, 1, 2, 3231, 'fasfadfsdfsd'),
+(5, 'fdsa', 'fasdf', 'fsda', 1, 1, 2, 3231, 'fasfadfsdfsd'),
+(6, 'alex', '1622nob91', 'pais', 1992, 0, 0, 0, 'alex@gmail.com');
 
 --
 -- Índices para tablas volcadas
@@ -103,7 +106,7 @@ MODIFY `id_imagen` int(11) NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-MODIFY `ID_USUARIO` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+MODIFY `ID_USUARIO` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
