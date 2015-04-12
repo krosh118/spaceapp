@@ -1,28 +1,33 @@
 <?php
-require_once "./servidor/lib/nusoap.php";
 $msg = "";
 $rec = "";
 $cor = "";
+$conn = mysql_connect("127.0.0.1","root","");
+mysql_select_db("redspace",$conn);
 // Si se apreta el boton Agendar, da la condicion como true.
 if($_POST['enviodatos'])
 {
 	
 	$nombre = htmlentities($_POST['nombre']);
-	$correo = htmlentities($_POST['email']);
+	$correo = htmlentities($_POST['correo']);
 	$contra = htmlentities($_POST['contra']);
 	$nacimiento = htmlentities($_POST['nacimiento']);
+	$pais = htmlentities($_POST['pais']);
+	$experto = 0;
 	
 	
-		if($nombre!=null && $rcontra!=null && $contra!=null && $correo!=null  )
+		if($nombre!=null && $contra!=null && $correo!=null  && $nacimiento!=null && $pais!=null)
 		{
 			
-			if($rcontra == $contra){
-				$msg = $cliente->call("setNuevoUsuario", array("correo" => "".$correo ,"nombre" => "".$nombre,"pass" => "".md5($contra) ) );
-				$cor = $correo;
-			}else{
-				$msg = "La confirmacion de su contraseña no es igual a la contraseña intende de nuevo";
-			}
+			$ssql = "INSERT INTO `redspace`.`usuario` (`nombre`, `pass`, `pais`, `fecha_nacimiento`, `experto`, `nivel`, `exp_actual`, `correo`) VALUES ('$nombre', '$contra', 'pais', '$nacimiento', '0', '0', '0', '$correo');";
+			//Ejecuto la sentencia 
+				$rs = mysql_query($ssql,$conn) or die(mysql_error()); 
+				
+
+		
 			
+			
+	
 			
 		} else { 
 			
@@ -87,6 +92,7 @@ if($_POST['enviodatos'])
                         <h3>
 							<?=$msg;?>
 						</h3>
+                        <a href="index.php" class="btn btn-lg btn-warning btn-block">Regresar a Inicio</a>
                     </div>
                 </div>
             </div>
